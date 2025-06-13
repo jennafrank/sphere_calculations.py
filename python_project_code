@@ -1,0 +1,38 @@
+# -------------------------------------------------------------
+# Homework Assignment: Sphere Calculations
+# Course: Intro to Python Programming
+# Student: Jenna Frank
+#
+# Task:
+# Write a program that takes the radius of a sphere (a floating-point number)
+# as input and then outputs the sphere’s:
+#  - Diameter
+#  - Circumference
+#  - Surface Area
+#  - Volume
+#
+# Formulas:
+#  - Diameter = 2 × radius
+#  - Circumference = 2 × π × radius
+#  - Surface Area = 4 × π × radius²
+#  - Volume = (4/3) × π × radius³
+#
+# Notes:
+# - You may choose to round or not round the output.
+# - Use the math module for π (math.pi).
+# -------------------------------------------------------------
+
+import math
+
+radius = float(input("Enter the radius of the sphere: "))
+
+diameter = 2 * radius
+circumference = 2 * math.pi * radius
+surface_area = 4 * math.pi * radius ** 2
+volume = (4 / 3) * math.pi * radius ** 3
+
+print(f"\nResults for a sphere with radius {radius}:")
+print(f"Diameter: {round(diameter, 2)}")
+print(f"Circumference: {round(circumference, 2)}")
+print(f"Surface Area: {round(surface_area, 2)}")
+print(f"Volume: {round(volume, 2)}")
