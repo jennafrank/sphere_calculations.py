@@ -1,35 +1,90 @@
 # This script was created as part of my Intro to Python coursework at Rose State College. It calculates geometric properties of a sphere using user input and Python’s math module.
 
-Project Description: Sphere Calculations
-This Python program calculates the diameter, circumference, surface area, and volume of a sphere based on user input for the radius. I chose to write the code in a simple, readable way using built-in functions and the math module to demonstrate a solid understanding of variables, input/output, and basic arithmetic operations.
+# 🧮 Sphere Calculations in Python
 
-Why I Coded It This Way:
-User Input: I used input() and float() to accept radius values so the program can handle decimals, which are common in real-world measurements.
+## 📘 Homework Prompt
 
-Math Module: I imported math to access the constant math.pi for more precise calculations.
+**Assignment**:  
+Write a Python program that takes the radius of a sphere (a floating-point number) as input and then outputs the sphere’s:
 
-Clear Variable Names: Each geometric formula is broken down into individual variables (diameter, circumference, etc.) to make the code easy to understand and debug.
+- Diameter
+- Circumference
+- Surface Area
+- Volume
 
-Formatted Output: I used f-strings to neatly print the results with descriptive labels, and I rounded the output to 2 decimal places using the round() function for a cleaner, more professional presentation.
-
-Structured & Commented: The code includes a header comment block explaining the assignment prompt so that anyone reading the code—including future employers—can quickly understand the project’s purpose.
-
-This structure mirrors how real-world developers are expected to write code: readable, well-documented, and user-friendly. It also reflects the kinds of tasks covered in early programming or CompTIA certification objectives—connecting math, logic, and Python fundamentals.
-
-Pop Culture Tie-In
-Like Iron Man building his suit with precision and calculations, this program turns math into function. In cybersecurity and tech, accuracy and process matter just as much as creativity—and that starts with the basics.
-
-References
-Whitman, M. E., & Mattord, H. J. (2018). Management of Information Security (6th ed.). Cengage Learning.
-
-Python Software Foundation. (n.d.). Python Documentation. Retrieved from https://docs.python.org/
-
-GeeksforGeeks. (n.d.). Python math Module. Retrieved from https://www.geeksforgeeks.org/python-math-module/
-
+Use formulas for sphere geometry and round the output if desired.
 
 ---
 
-What This Program Does (in plain English):
+## 🛠️ What This Program Does
+
+This program asks the user for the radius of a sphere and calculates key geometric values:
+
+- **Diameter** = 2 × radius  
+- **Circumference** = 2 × π × radius  
+- **Surface Area** = 4 × π × radius²  
+- **Volume** = (4/3) × π × radius³  
+
+It then prints each value, neatly formatted and rounded to two decimal places.
+
+---
+
+## 🎯 Why I Coded It This Way
+
+I designed this program with clarity, simplicity, and readability in mind:
+
+- **User Input**: The radius is entered as a floating-point number to allow decimal precision.
+- **Modular Design**: Each formula is stored in its own variable so the logic is clear and beginner-friendly.
+- **Python’s `math` Module**: I used `math.pi` to get an accurate and consistent value of π.
+- **Formatted Output**: I used Python f-strings and the `round()` function to display results professionally and clearly.
+- **Well-Documented**: The code includes comments and a top block with the assignment prompt so others (including future employers) can easily understand the context.
+
+---
+
+## 💡 What I Learned
+
+- How to accept and process floating-point user input in Python.
+- How to use the `math` module for precise scientific constants.
+- How to structure output using f-strings for clean, human-readable display.
+- The importance of documentation and clean code—especially when saving projects to GitHub for future reference.
+
+---
+
+## 📁 File
+
+- `sphere_calculations.py`: The main script file for this project.
+
+---
+
+## 📌 Example Output
+
+```text
+Enter the radius of the sphere: 4.5
+
+Diameter: 9.0
+Circumference: 28.27
+Surface Area: 254.47
+Volume: 381.7
+````
+
+---
+
+## 🧠 Pop Culture Tie-In
+
+Like Iron Man building his suit with precision and calculations, this program turns math into function. In cybersecurity and tech, accuracy and process matter just as much as creativity—and that starts with the basics.
+
+---
+
+## 📚 References
+
+* Whitman, M. E., & Mattord, H. J. (2018). *Management of Information Security* (6th ed.). Cengage Learning.
+* Python Software Foundation. (n.d.). *Python Documentation*. Retrieved from [https://docs.python.org/](https://docs.python.org/)
+* GeeksforGeeks. (n.d.). *Python math Module*. Retrieved from [https://www.geeksforgeeks.org/python-math-module/](https://www.geeksforgeeks.org/python-math-module/)
+
+---
+## 🧠 What This Program Does (in plain English):
+
+```text
 
 The program asks the user to **enter the radius of a sphere**, then calculates:
 
@@ -40,17 +95,19 @@ The program asks the user to **enter the radius of a sphere**, then calculates:
 
 It uses mathematical formulas to compute those values and then **prints the results** nicely using formatted output.
 
+```
+
 ---
 
-Line-by-Line Breakdown:
+## 🧩 Line-by-Line Breakdown:
 
-1. `import math`
+### 1. `import math`
 
 This line pulls in Python’s built-in **math module**, which gives us access to constants and functions like `math.pi` (which represents π ≈ 3.14159). Without this, we’d have to manually type out pi.
 
 ---
 
-2. `radius = float(input("Enter the radius of the sphere: "))`
+### 2. `radius = float(input("Enter the radius of the sphere: "))`
 
 This line:
 
@@ -62,7 +119,7 @@ You use `float` instead of `int` because the radius of a sphere isn’t always a
 
 ---
 
-3. The Formulas:
+### 3. The Formulas:
 
 ```python
 diameter = 2 * radius
@@ -85,7 +142,7 @@ So `radius ** 2` means *radius squared*, and `radius ** 3` means *radius cubed*.
 
 ---
 
-4. Why use `round()`?
+### 4. Why use `round()`?
 
 ```python
 round(circumference, 2)
@@ -102,7 +159,7 @@ So you’re balancing:
 
 ---
 
-5. f-Strings:
+### 5. f-Strings:
 
 ```python
 print(f"Circumference: {round(circumference, 2)}")
@@ -125,10 +182,9 @@ Without f-strings, you’d have to write something messier like:
 print("Circumference: " + str(round(circumference, 2)))
 ```
 
-Recap:
+---
+
+## 🗣️ Recap:
 
 > I used Python’s `math` module to access pi accurately, and `float()` to accept decimal input for the radius. I used standard formulas for sphere measurements, and applied `round()` to make the results readable and professional. I formatted my print statements using f-strings for clean and modern output. This makes the program user-friendly while still accurate.
-
-
-
 
